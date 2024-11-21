@@ -16,6 +16,7 @@ RUN touch /var/run/nginx.pid && \
 USER nginx
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY code /usr/share/nginx/html
+CMD ["nginx", "-g", "daemon off;"]
 
 
 #          WITHOUT BEST PRACTICES
